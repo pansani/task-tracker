@@ -1,0 +1,63 @@
+/** @format */
+#header {
+  width: 500px;
+  text-align: center;
+  padding: 20px;
+  background-color: #204968;
+  color: #fff;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+
+#task-form {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.label {
+  display: block;
+  margin-top: 10px;
+  font-weight: bold;
+}
+
+.input-task {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 40px;
+}
+
+#task-description {
+  height: 100px;
+}
+
+textarea.input-task {
+  height: 100px;
+}
+
+input[type="date"] {
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 100%;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background-color: #4169e1;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #555;
+}
