@@ -1,0 +1,37 @@
+/** @format */
+
+#card-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-left: 20px;
+}
+
+#task-card {
+  width: 350px;
+  height: 400px;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px;
+  margin: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+#task-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 0;
+  color: #333;
+}
+
+#task-description {
+  font-size: 14px;
+  margin: 4px 0;
+  color: #555;
+}
+
+#task-date {
+  font-size: 12px;
+  color: #777;
+}
