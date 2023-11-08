@@ -1,3 +1,16 @@
+<!-- @format -->
+
+# Task Tracker
+
+Task Tracker is a simple task management application built with React, designed to help you practice `useState`, `props`, and rendering content dynamically.
+
+## Features
+
+- Add new tasks with titles, descriptions, and due dates.
+- Edit existing tasks to update their details.
+- Delete tasks you no longer need.
+- View and manage your task list with ease.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
