@@ -45,7 +45,7 @@ export default function TaskForm({
           name="dateValue"
           onChange={onDateChange}
         ></input>
-        <button type="button" onClick={handleAddTask}>
+        <button id="add-task" type="button" onClick={handleAddTask}>
           Add Task
         </button>
       </form>

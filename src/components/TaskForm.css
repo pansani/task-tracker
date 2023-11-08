@@ -48,7 +48,7 @@ input[type="date"] {
   width: 100%;
 }
 
-button {
+#add-task {
   display: block;
   width: 100%;
   padding: 10px;
@@ -60,6 +60,10 @@ button {
   margin-top: 10px;
 }
 
-button:hover {
+#add-task:hover {
   background-color: #555;
+}
+
+button:hover {
+  cursor: pointer;
 }

@@ -35,6 +35,7 @@ function App() {
         taskName: taskData.titleValue,
         taskDescription: taskData.descriptionValue,
         taskDate: taskData.dateValue,
+        isVisible: true,
       };
 
       setTasks([...tasks, newTask]);
@@ -45,6 +46,12 @@ function App() {
         dateValue: "",
       });
     }
+  };
+
+  const handleDeleteTask = (index) => {
+    const updatedTasks = [...tasks];
+    updatedTasks[index].isVisible = false;
+    setTasks(updatedTasks);
   };
 
   return (
@@ -59,14 +66,18 @@ function App() {
         addTask={addTask}
       />
       <div id="card-grid">
-        {tasks.map((task, index) => (
-          <Task
-            key={index}
-            taskName={task.taskName}
-            taskDescription={task.taskDescription}
-            taskDate={task.taskDate}
-          />
-        ))}
+        {tasks.map(
+          (task, index) =>
+            task.isVisible && (
+              <Task
+                key={index}
+                taskName={task.taskName}
+                taskDescription={task.taskDescription}
+                taskDate={task.taskDate}
+                deleteTask={() => handleDeleteTask(index)}
+              />
+            )
+        )}
       </div>
     </div>
   );
