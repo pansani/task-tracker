@@ -11,7 +11,7 @@ function App() {
     dateValue: "",
   });
 
-  const [taskAdded, setTaskAdded] = useState(false);
+  const [tasks, setTasks] = useState([]);
 
   const handleTitleChange = (event) => {
     setTaskData({ ...taskData, titleValue: event.target.value });
@@ -26,7 +26,25 @@ function App() {
   };
 
   const addTask = () => {
-    setTaskAdded(true);
+    if (
+      taskData.titleValue &&
+      taskData.descriptionValue &&
+      taskData.dateValue
+    ) {
+      const newTask = {
+        taskName: taskData.titleValue,
+        taskDescription: taskData.descriptionValue,
+        taskDate: taskData.dateValue,
+      };
+
+      setTasks([...tasks, newTask]);
+
+      setTaskData({
+        titleValue: "",
+        descriptionValue: "",
+        dateValue: "",
+      });
+    }
   };
 
   return (
@@ -40,13 +58,16 @@ function App() {
         onDateChange={handleDateChange}
         addTask={addTask}
       />
-      {taskAdded && (
-        <Task
-          taskName={taskData.titleValue}
-          taskDescription={taskData.descriptionValue}
-          taskDate={taskData.dateValue}
-        />
-      )}
+      <div id="card-grid">
+        {tasks.map((task, index) => (
+          <Task
+            key={index}
+            taskName={task.taskName}
+            taskDescription={task.taskDescription}
+            taskDate={task.taskDate}
+          />
+        ))}
+      </div>
     </div>
   );
 }

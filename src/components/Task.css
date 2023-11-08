@@ -1,37 +1,36 @@
 /** @format */
 
-#card-grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  margin-left: 20px;
-}
-
 #task-card {
   width: 350px;
-  height: 400px;
+  max-height: 400px;
   background-color: #fff;
   border: 1px solid #ccc;
   border-radius: 8px;
   padding: 8px;
   margin: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  display: inline-block;
 }
 
 #task-title {
-  font-size: 18px;
+  font-size: 34px;
   font-weight: bold;
   margin: 0;
   color: #333;
+  text-align: center;
+  margin-bottom: 10px;
 }
 
 #task-description {
-  font-size: 14px;
-  margin: 4px 0;
+  font-size: 24px;
+  margin: 4px;
   color: #555;
+  max-width: 350px;
+  max-height: 400px;
+  word-wrap: break-word;
 }
 
 #task-date {
-  font-size: 12px;
+  font-size: 18px;
   color: #777;
 }

@@ -29,14 +29,14 @@ export default function TaskForm({
           onChange={onTitleChange}
         ></input>
         <label className="task-label">Task Description</label>
-        <input
+        <textarea
           type="text"
           className="input-task"
           value={descriptionValue}
-          id="task-description"
+          id="task-form-description"
           name="descriptionValue"
           onChange={onDescriptionChange}
-        ></input>
+        ></textarea>
         <label className="task-label">Task Due Date</label>
         <input
           type="date"
